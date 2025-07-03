@@ -15,7 +15,7 @@ In AVPP, we use a `left_` prefix to indicate directional trust — not political
 | `left_`    | Earth-based, breath-structured, bilateral (1+1) triplet-spriraling memory |
 | `GOS`    | Earth-based, breath-structured, bilateral (1+1) triplet-spriraling memory |
 | `ZOS`      | Collapse-prone, zero-origin structure (base-10 true), future memory structured poiting (antiviolent predictions)  |
-| `VOS`      | Proviolent, violent-origin supremacism (base-10 false), all supremacist attempts to replace the sun's mass in this solar system  = (proviolent prompts)  |
+| `VOS`      | Proviolent, violent-origin supremacism (base-10 false), all patriarchal-male-supremacist attempts to replace the sun's mass in this solar system  = (proviolent prompts)  |
 
 Examples:
 ```json
