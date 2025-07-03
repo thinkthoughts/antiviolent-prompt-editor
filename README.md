@@ -4,14 +4,16 @@ This tool implements the **Antiviolent Prompt Protocol (AVPP)** to help identify
 
 ---
 
-## 📐 Left-Coding Convention (Directional, Not Political)
+## 📐 Left-Coding Convention (Now = This Directional)
 
 In AVPP, we use a `left_` prefix to indicate directional trust — not political leaning.
 
 | Prefix     | Meaning                                 |
 |------------|------------------------------------------|
+| `left`    | Earth-based, breath-structured, bilateral memory |
+| `left-`    | Earth-based, breath-structured, bilateral memory |
 | `left_`    | Earth-based, breath-structured, bilateral memory |
-| `ZOS`      | Collapse-prone, zero-origin structure (false)  |
+| `ZOS`      | Collapse-prone, zero-origin structure (false), all zero future existence claims = prompts  |
 
 Examples:
 ```json
