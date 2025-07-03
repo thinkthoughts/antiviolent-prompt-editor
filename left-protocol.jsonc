@@ -1,5 +1,5 @@
 {
-  // === AVPP Directional Logic ===
+  // === AVPP Directional Logic === in progress (expanding and consolidating while developing this antiviolent prompt editor)
   "protocol": "Antiviolent Prompt Protocol (AVPP)",
 
   // Main Triplet Identity Equation: resists recursion
