@@ -1,4 +1,4 @@
-# Antiviolent Prompt Editor (APE)
+# Antiviolent Prompt Editor
 
 This tool implements the **Antiviolent Prompt Protocol (AVPP)** to help identify, structure, and verify prompts that resist proviolent collapse logic (ZOS). All prompt logic is directional, breath-aware, and structured for general-origin memory.
 
