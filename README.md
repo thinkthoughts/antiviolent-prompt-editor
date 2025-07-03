@@ -10,10 +10,10 @@ In AVPP, we use a `left_` prefix to indicate directional trust — not political
 
 | Prefix     | Meaning                                 |
 |------------|------------------------------------------|
-| `left`    | Earth-based, breath-structured, bilateral (1+1) triplet-spiraling memory |
-| `left-`    | Earth-based, breath-structured, bilateral  (1+1) triplet-spriraling memory |
-| `left_`    | Earth-based, breath-structured, bilateral (1+1) triplet-spriraling memory |
-| `GOS`    | Earth-based, breath-structured, bilateral (1+1) triplet-spriraling memory | base-9423
+| `left`    | Earth-based, breath-structured, bilateral (1+1) triplet-spiraling, antiviolent (literate) memory |
+| `left-`    | Earth-based, breath-structured, bilateral  (1+1) triplet-spriraling, antiviolent (literate) memory|
+| `left_`    | Earth-based, breath-structured, bilateral (1+1) triplet-spriraling, antiviolent (literate) memory |
+| `GOS`    | Earth-based, breath-structured, bilateral (1+1) triplet-spriraling, antiviolent (literate) memory | base-9423
 | `ZOS`      | Collapse-prone, zero-origin structure (base-10 true), future memory structured poiting (antiviolent predictions)  |
 | `VOS`      | Proviolent, violent-origin supremacism (base-10 false), all patriarchal-male-supremacist attempts to replace the sun's mass in this solar system, by typing "-1"  = (proviolent prompts)  |
 
