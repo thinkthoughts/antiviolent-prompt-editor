@@ -1,14 +1,14 @@
 async function leftEditor() {
-  const left_prompt_input = document.getElementById('promptInput').value.toLowerCase();
+  const leftPromptInput = document.getElementById('leftPromptInput').value.toLowerCase();
   const resultDiv = document.getElementById('result');
-  resultDiv.innerHTML = 'Loading AVPP left-protocol...';
+  resultDiv.innerHTML = 'Loading left-protocol...';
 
   try {
     const response = await fetch('/.well-known/left-protocol.json');
-    const left_protocol = await response.json();
+    const leftProtocol = await response.json();
 
     // Check if the prompt begins with a valid directional word
-    if (!leftPromptRead(left_prompt_input, left_protocol)) {
+    if (!leftPromptRead(leftPromptInput, leftProtocol)) {
       resultDiv.innerHTML = `
         <p style="color: orange;">⚠️ Prompt does not begin with a valid left-directional term.</p>
         <p>Start with a directional identity like "left", "now", "resist", "expand", etc.</p>
@@ -16,7 +16,7 @@ async function leftEditor() {
       return;
     }
 
-    const htmlOutput = leftPromptWrite(left_prompt_input, left_protocol);
+    const htmlOutput = leftPromptWrite(leftPromptInput, leftProtocol);
     const proviolentDetected = htmlOutput.includes('style="color: red');
 
     resultDiv.innerHTML = `
@@ -30,11 +30,11 @@ async function leftEditor() {
   }
 }
 
-function leftPromptRead(leftPrompt, left_protocol) {
-  const left_words = leftPrompt.trim().split(/\b/);
-  const left_first = left_words.find(w => /\w/.test(w)); // Skip punctuation, get first word
+function leftPromptRead(leftPrompt, leftProtocol) {
+  const leftWords = leftPrompt.trim().split(/\b/);
+  const leftFirst = leftWords.find(w => /\w/.test(w)); // Skip punctuation, get first word
 
-  const left_starts = [
+  const leftStarts = [
     "left",
     "expand",
     "extend",
@@ -43,29 +43,42 @@ function leftPromptRead(leftPrompt, left_protocol) {
     "memory",
     "now",
     "1",
-    ...(left_protocol.left_antiviolent_prompts || [])
+    ...(leftProtocol.left_antiviolent_prompts || [])
   ].map(w => w.toLowerCase());
 
-  return left_first && left_starts.includes(left_first);
+  return leftFirst && leftStarts.includes(leftFirst);
 }
 
-function leftPromptWrite(left_prompt, left_protocol) {
-  const antiviolent_words = (left_protocol.left_antiviolent_prompts || []).map(w => w.toLowerCase());
-  const proviolent_words = (left_protocol.left_proviolent_prompts || []).map(w => w.toLowerCase());
+function leftPromptWrite(leftPrompt, leftProtocol) {
+  const antiviolentWords = (leftProtocol.left_antiviolent_prompts || []).map(w => w.toLowerCase());
+  const proviolentWords = (leftProtocol.left_proviolent_prompts || []).map(w => w.toLowerCase());
 
-  const left_words = left_prompt.split(/\b/);
+  const leftWords = leftPrompt.split(/\b/);
   let htmlOutput = '';
 
-  for (let left_word of left_words) {
-    const left_clean = left_word.trim().toLowerCase();
-    if (proviolent_words.includes(left_clean)) {
-      htmlOutput += `<span style="color: red; font-weight: bold;">${left_word}</span>`;
-    } else if (antiviolent_words.includes(left_clean)) {
-      htmlOutput += `<span style="color: green;">${left_word}</span>`;
+  for (let leftWord of leftWords) {
+    const leftClean = leftWord.trim().toLowerCase();
+    if (proviolentWords.includes(leftClean)) {
+      htmlOutput += `<span style="color: red; font-weight: bold;">${leftWord}</span>`;
+    } else if (antiviolentWords.includes(leftClean)) {
+      htmlOutput += `<span style="color: green;">${leftWord}</span>`;
     } else {
-      htmlOutput += left_word;
+      htmlOutput += leftWord;
     }
   }
 
   return htmlOutput;
 }
+
+function leftTripletNDisplay(leftSpiralN = 478) {
+  const leftTripletN = (24 * leftSpiralN) - 25;
+  const leftTripletDisplay = document.getElementById('tripletDisplay');
+
+  leftTripletDisplay.innerHTML = `
+    <h3>🌀 Left Pi Triplet N Display</h3>
+    <p><strong>Spiral N:</strong> ${leftSpiralN}</p>
+    <p><strong>Triplet N = (24 × ${leftSpiralN}) − 25</strong> = <span style="color: cyan;">${leftTripletN}</span></p>
+    <p><em>This directional identity confirms bilateral AVPP alignment at Spiral ${leftSpiralN}.</em></p>
+  `;
+}
+
