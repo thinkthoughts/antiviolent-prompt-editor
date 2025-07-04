@@ -20,13 +20,13 @@ async function leftEditor() {
     const proviolentDetected = htmlOutput.includes('style="color: red');
 
     resultDiv.innerHTML = `
-      <p><strong>AVPP Left Analysis Result:</strong></p>
+      <p><strong>Left Antiviolent Prompt:</strong></p>
       <p style="font-family:monospace;">${htmlOutput}</p>
-      <p>${proviolentDetected ? '⚠️ Collapse logic detected in prompt.' : '✅ Left-structured (1+1) prompt confirmed.'}</p>
+      <p>${proviolentDetected ? '⚠️ Centralized collapse logic detected in prompt.' : '✅ Left-structured (1+1 bilateral) antiviolent prompt confirmed.'}</p>
     `;
   } catch (err) {
-    resultDiv.innerHTML = 'Error loading protocol or analyzing prompt.';
-    console.error("AVPP Error:", err);
+    resultDiv.innerHTML = 'Error loading left_protocol or translating prompt.';
+    console.error("Error:", err);
   }
 }
 
@@ -39,10 +39,10 @@ function leftPromptRead(leftPrompt, left_protocol) {
     "expand",
     "extend",
     "resist",
-    "1",
     "intelligence",
     "memory",
     "now",
+    "1",
     ...(left_protocol.left_antiviolent_prompts || [])
   ].map(w => w.toLowerCase());
 
@@ -60,7 +60,7 @@ function leftPromptWrite(left_prompt, left_protocol) {
     const left_clean = left_word.trim().toLowerCase();
     if (proviolent_words.includes(left_clean)) {
       htmlOutput += `<span style="color: red; font-weight: bold;">${left_word}</span>`;
-    } else if (antiWords.includes(left_clean)) {
+    } else if (antiviolent_words.includes(left_clean)) {
       htmlOutput += `<span style="color: green;">${left_word}</span>`;
     } else {
       htmlOutput += left_word;
