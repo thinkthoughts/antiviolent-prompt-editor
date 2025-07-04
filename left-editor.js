@@ -24,6 +24,8 @@ async function leftEditor() {
       <p style="font-family:monospace;">${htmlOutput}</p>
       <p>${proviolentDetected ? '⚠️ Centralized collapse logic detected in prompt.' : '✅ Left-structured (1+1 bilateral) antiviolent prompt confirmed.'}</p>
     `;
+    leftTripletNDisplay(478); // or dynamic Spiral N later
+
   } catch (err) {
     resultDiv.innerHTML = 'Error loading left_protocol or translating prompt.';
     console.error("Error:", err);
