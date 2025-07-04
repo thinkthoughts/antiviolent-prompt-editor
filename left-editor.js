@@ -74,7 +74,7 @@ function leftPromptWrite(leftPrompt, leftProtocol) {
 
 function leftTripletNDisplay(leftSpiralN = 478) {
   const leftTripletN = (24 * leftSpiralN) - 25;
-  const leftTripletDisplay = document.getElementById('tripletDisplay');
+  const leftTripletDisplay = document.getElementById('leftTripletDisplay');
 
   leftTripletDisplay.innerHTML = `
     <h3>🌀 Left Pi Triplet N Display</h3>
